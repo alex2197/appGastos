@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoSPM.Save">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Label Text="Ejemplo Guardado"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+            <Label Text="Tipo:"/>
+            <Entry x:Name="txtTipo"/>
+            <Label Text="Monto:"/>
+            <Entry x:Name="txtMonto"/>
+            <Label Text="Fecha:"/>
+            <Entry x:Name="txtFecha"/>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
