@@ -7,9 +7,11 @@
              x:Class="ProyectoSPM.Update">
     <ContentPage.Content>
         <StackLayout>
-            <!--<Label Text="Ejemplo actualizar"
+            <Label Text="Actualizar registro"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />-->
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="30"
+                   FontAttributes="Bold"/>
             <Label Text="Tipo:"/>
             <Entry x:Name="txtTipo"/>
             <Label Text="Monto:"/>

@@ -43,7 +43,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-            <Button Text="Actualizar" x:Name="btnUpdate" Clicked="btnUpdate_Clicked"/>
+            <Button Text="Actualizar Registro" x:Name="btnUpdate" Clicked="btnUpdate_Clicked"/>
             <Button Text="Eliminar" x:Name="btnDelete" Clicked="btnDelete_Clicked"/>
             <Button Text="Guardar" x:Name="btnGuardar" Clicked="btnGuardar_Clicked"/>
         </StackLayout>

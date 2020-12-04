@@ -17,4 +17,4 @@ C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netsta
 C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netstandard2.0\Delete.xaml.g.cs
 C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netstandard2.0\Update.xaml.g.cs
 C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netstandard2.0\IniciarSesion.xaml.g.cs
-C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netstandard2.0\Registrar.xaml.g.cs
+C:\Users\alex2\source\repos\ProyectoSPM\ProyectoSPM\ProyectoSPM\obj\Debug\netstandard2.0\Registro.xaml.g.cs

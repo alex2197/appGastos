@@ -20,7 +20,7 @@ namespace ProyectoSPM
 
         private async void btnRegistrarse_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Registrar());
+            await Navigation.PushAsync(new Registro());
         }
 
         private async void btnIniciarSesion_Clicked(object sender, EventArgs e)

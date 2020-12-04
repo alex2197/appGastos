@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ProyectoSPM.Registrar.xaml", "Registrar.xaml", typeof(global::ProyectoSPM.Registrar))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ProyectoSPM.Registro.xaml", "Registro.xaml", typeof(global::ProyectoSPM.Registro))]
 
 namespace ProyectoSPM {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Registrar.xaml")]
-    public partial class Registrar : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Registro.xaml")]
+    public partial class Registro : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry txtName;
@@ -26,15 +26,15 @@ namespace ProyectoSPM {
         private global::Xamarin.Forms.Entry txtPsw;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnRegistrar;
+        private global::Xamarin.Forms.Button btnRegistro;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Registrar));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Registro));
             txtName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtName");
             txtUser = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtUser");
             txtPsw = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtPsw");
-            btnRegistrar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnRegistrar");
+            btnRegistro = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnRegistro");
         }
     }
 }

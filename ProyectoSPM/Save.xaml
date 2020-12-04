@@ -7,9 +7,11 @@
              x:Class="ProyectoSPM.Save">
     <ContentPage.Content>
         <StackLayout>
-            <!--<Label Text="Ejemplo Guardado"
+            <Label Text="Guardar registro"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />-->
+                HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="30"/>
             <Label Text="Tipo:"/>
             <Entry x:Name="txtTipo"/>
             <Label Text="Monto:"/>

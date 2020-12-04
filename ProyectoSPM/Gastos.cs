@@ -14,17 +14,12 @@ namespace ProyectoSPM
         public string tipo { get; set; }
         public int monto { get; set; }
         public string fecha { get; set; }
-
+        public string nombre { get; set; }
+        public string usuario { get; set; }
+        public string psw { get; set; }
         public async void Save()
         {
             await ConnectionManager.Context.SaveAsync<Gastos>(this);
-        }
-
-        public static Gastos LoadById(int idx)
-        {
-            Task<Gastos> task = ConnectionManager.Context.LoadAsync<Gastos>(idx);
-            task.Wait();
-            return task.Result;
         }
 
         public static async Task<List<Gastos>> LoadAll()

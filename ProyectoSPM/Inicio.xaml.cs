@@ -52,7 +52,7 @@ namespace ProyectoSPM
             object seleccionado = grData.SelectedItem;
             if (seleccionado == null)
             {
-                await DisplayAlert("Actualizar", "Seleccione un registro", "Ok");
+                await DisplayAlert("Eliminar", "Seleccione un registro", "Ok");
             }
             else
             {
