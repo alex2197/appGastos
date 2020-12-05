@@ -28,6 +28,7 @@ namespace ProyectoSPM
             gastos.monto = monto;
             gastos.fecha = txtFecha.Text;
 
+
             gastos.Save();
 
             await DisplayAlert("Guardar", "Gasto Guardado", "Ok");

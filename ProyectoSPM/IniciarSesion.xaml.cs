@@ -22,12 +22,12 @@ namespace ProyectoSPM
         {
             string usuario = txtUser.Text;
             string psw = txtPsw.Text;
-            Task<bool> tarea = Gastos.FindUser(usuario, psw);
+            Task<string> tarea = Gastos.FindUser(usuario, psw);
             tarea.Wait();
-            bool isValid = tarea.Result;
-            if (isValid)
+            string isValid = tarea.Result;
+            if (isValid != null)
             {
-                await Navigation.PushAsync(new Inicio());
+                await Navigation.PushAsync(new Inicio(usuario));
             }
             else
             {

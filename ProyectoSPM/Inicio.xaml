@@ -7,7 +7,7 @@
              x:Class="ProyectoSPM.Inicio">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Base de datos" FontSize="30" FontAttributes="Bold"/>
+            <Label Text="Gastos" FontSize="30" FontAttributes="Bold"/>
             <Button x:Name="btnActualizarTabla" Text="Actualizar tabla" Clicked="btnActualizarTabla_Clicked"/>
             <StackLayout Margin="20, 35, 20, 20">
                 <ListView x:Name="grData" ItemsSource="{Binding Gastos}">

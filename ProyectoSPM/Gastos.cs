@@ -24,10 +24,10 @@ namespace ProyectoSPM
             await ConnectionManager.Context.SaveAsync<Gastos>(this);
         }
 
-        public static async Task<List<Gastos>> LoadAll()
+        public static async Task<List<Gastos>> LoadAll(string usuario)
         {
-            List<Gastos> gastos = new List<Gastos>();
             List<ScanCondition> scanFilter = new List<ScanCondition>();
+            scanFilter.Add(new ScanCondition("usuario", ScanOperator.Equal, usuario));
             AsyncSearch<Gastos> search = ConnectionManager.Context.ScanAsync<Gastos>(scanFilter);
 
             do
@@ -35,13 +35,8 @@ namespace ProyectoSPM
                 Task<List<Gastos>> tarea = search.GetNextSetAsync();
                 tarea.Wait();
                 List<Gastos> results = tarea.Result;
-
-                foreach (Gastos item in results)
-                {
-                    gastos.Add(item);
-                }
+                return results;
             } while (!search.IsDone);
-            return gastos;
         }
 
         public async void Delete()
@@ -49,9 +44,8 @@ namespace ProyectoSPM
             await ConnectionManager.Context.DeleteAsync<Gastos>(this);
         }
 
-        public static async Task<bool> FindUser(string usuario, string psw)
+        public static async Task<string> FindUser(string usuario, string psw)
         {
-            bool isValid = false;
             List<ScanCondition> scanFilter = new List<ScanCondition>();
             scanFilter.Add(new ScanCondition("usuario", ScanOperator.Equal, usuario));
             scanFilter.Add(new ScanCondition("psw", ScanOperator.Equal, psw));
@@ -64,11 +58,11 @@ namespace ProyectoSPM
                 List<Gastos> results = tarea.Result;
                 if(results.Count >= 1)
                 {
-                    isValid = true;
+                    return usuario;
                     break;
                 }
             } while (!search.IsDone);
-            return isValid;
+            return null;
         }
     }
 }

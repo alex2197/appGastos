@@ -15,15 +15,15 @@ namespace ProyectoSPM
     public partial class Inicio : ContentPage
     {
         public ObservableCollection<Gastos> Gasto { get; private set; }
-        public static int id;
-        public Inicio(int xid)
+        public static string usuario;
+        public Inicio(string user)
         {
+            usuario = user;
             InitializeComponent();
-            id = xid;
             Gasto = new ObservableCollection<Gastos>();
             grData.ItemsSource = Gasto;
             Gasto.Clear();
-            Task<List<Gastos>> tarea = Gastos.LoadAll();
+            Task<List<Gastos>> tarea = Gastos.LoadAll(user);
             foreach (Gastos item in tarea.Result)
             {
                 Gasto.Add(item);
@@ -67,8 +67,9 @@ namespace ProyectoSPM
 
         private async void btnActualizarTabla_Clicked(object sender, EventArgs e)
         {
+            string user = usuario;
             Gasto.Clear();
-            Task<List<Gastos>> tarea = Gastos.LoadAll();
+            Task<List<Gastos>> tarea = Gastos.LoadAll(user);
             foreach (Gastos item in tarea.Result)
             {
                 Gasto.Add(item);
