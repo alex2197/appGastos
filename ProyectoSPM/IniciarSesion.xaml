@@ -22,7 +22,7 @@
 
             <StackLayout Grid.Row="2" Grid.Column="0">
                 <Label Text="Usuario"/>
-                <Entry x:Name="txtName"/>
+                <Entry x:Name="txtUser"/>
                 <Label Text="Password"/>
                 <Entry x:Name="txtPsw"/>
                 <Button x:Name="btnAceptar" Text="Aceptar" Clicked="btnAceptar_Clicked"/>

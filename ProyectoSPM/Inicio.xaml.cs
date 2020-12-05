@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amazon.DynamoDBv2.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -14,9 +15,11 @@ namespace ProyectoSPM
     public partial class Inicio : ContentPage
     {
         public ObservableCollection<Gastos> Gasto { get; private set; }
-        public Inicio()
+        public static int id;
+        public Inicio(int xid)
         {
             InitializeComponent();
+            id = xid;
             Gasto = new ObservableCollection<Gastos>();
             grData.ItemsSource = Gasto;
             Gasto.Clear();

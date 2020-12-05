@@ -1,6 +1,8 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2.DocumentModel;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,6 +47,28 @@ namespace ProyectoSPM
         public async void Delete()
         {
             await ConnectionManager.Context.DeleteAsync<Gastos>(this);
+        }
+
+        public static async Task<bool> FindUser(string usuario, string psw)
+        {
+            bool isValid = false;
+            List<ScanCondition> scanFilter = new List<ScanCondition>();
+            scanFilter.Add(new ScanCondition("usuario", ScanOperator.Equal, usuario));
+            scanFilter.Add(new ScanCondition("psw", ScanOperator.Equal, psw));
+            AsyncSearch<Gastos> search = ConnectionManager.Context.ScanAsync<Gastos>(scanFilter);
+
+            do
+            {
+                Task<List<Gastos>> tarea = search.GetNextSetAsync();
+                tarea.Wait();
+                List<Gastos> results = tarea.Result;
+                if(results.Count >= 1)
+                {
+                    isValid = true;
+                    break;
+                }
+            } while (!search.IsDone);
+            return isValid;
         }
     }
 }
