@@ -25,9 +25,18 @@ namespace ProyectoSPM
             gasto.nombre = txtName.Text;
             gasto.usuario = txtUser.Text;
             gasto.psw = txtPsw.Text;
-
-            gasto.Save();
-            await DisplayAlert("Registro", "Usuario registrado", "Ok");
+            Task<string> tarea = Gastos.FindUser(gasto.usuario, gasto.psw);
+            tarea.Wait();
+            string isValid = tarea.Result;
+            if (isValid != null)
+            {
+                await DisplayAlert("Error", "Ya existe un usuario con este nombre", "Ok");
+            }
+            else
+            {
+                gasto.Save();
+                await DisplayAlert("Registro", "Usuario registrado", "Ok");
+            }
         }
 
         private int GetNewId()
